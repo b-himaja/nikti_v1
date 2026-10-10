@@ -1,0 +1,31 @@
+[workspace]
+resolver = "2"
+members = ["crates/nikti-core", "crates/nikti-app"]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+
+[workspace.dependencies]
+arrow = { version = "53", features = ["ipc"] }
+polars = { version = "0.44", features = [
+    "lazy", "streaming",
+    "abs", "round_series", "cum_agg", "log", "pct_change", "rank",
+    "strings", "string_pad", "temporal", "dtype-full",
+    "cutqcut", "diff", "is_in", "interpolate", "mode",
+    "rolling_window", "asof_join", "cross_join", "semi_anti_join",
+    "unique_counts", "dynamic_group_by", "regex", "is_unique",
+    "offset_by", "pivot", "cov",
+    "csv", "parquet",
+] }
+sqlx = { version = "0.8", features = ["sqlite", "runtime-tokio"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4", "serde"] }
+thiserror = "2"
+sha2 = "0.10"
+sha1 = "0.10"
+md-5 = "0.10"
+hex = "0.4"
+regex = "1"

@@ -1,0 +1,15 @@
+[project]
+name = "nikti-sidecar"
+version = "0.1.0"
+description = "Nikti Python compute sidecar (Analysis gap-fill procedures only)"
+requires-python = ">=3.10"
+dependencies = [
+    "pyarrow>=17,<26",
+]
+
+[tool.setuptools.packages.find]
+include = ["nikti_sidecar*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

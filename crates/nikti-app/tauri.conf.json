@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "nikti",
+  "version": "0.1.0",
+  "identifier": "com.nikti.app",
+  "build": {
+    "frontendDist": "../../src/dist",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "npm --prefix ../src run dev",
+    "beforeBuildCommand": "npm --prefix ../src run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Nikti",
+        "width": 1200,
+        "height": 800
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false
+  }
+}

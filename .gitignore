@@ -1,0 +1,14 @@
+/target/
+**/*.rs.bk
+
+/legacy/
+/.claude/
+
+node_modules/
+src/dist/
+
+crates/nikti-app/gen/
+
+sidecar/**/__pycache__/
+sidecar/**/*.pyc
+sidecar/.venv/
